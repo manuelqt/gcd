@@ -13,6 +13,45 @@ The dataset includes the following files:
 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
 
+
+
+Transformations
+
+Load test and training sets and the activities
+
+
+The data set has been stored in the UCI HAR Dataset/ directory.
+
+The CDN url provided by the instructor is used instead of the original location, to offload the traffic to the UCI server.
+
+The unzip function is used to extract the zip file in this directory.
+
+Descriptive activity names to name the activities in the data set
+
+
+The class labels linked with their activity names are loaded from the activity_labels.txt file. 
+
+
+Appropriately labels the data set with descriptive activity names
+
+Each data frame of the data set is labeled - using the features.txt - with the information about the variables used on the feature vector. The Activity and Subject columns are also named properly before merging them to the test and train dataset.
+
+
+
+Merge test and training sets into one data set, including the activities
+
+The Activity and Subject columns are appended to the test and train data frames, and then are both merged in a new data frame.
+
+
+Extract only the measurements on the mean and standard deviation for each measurement
+
+
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Finaly the desired result, a tidy data table is created with the average of each measurement per activity/subject combination. The new dataset is saved in tidydata.txt file.
+
+
+
 TidyData  Fields
 
 
