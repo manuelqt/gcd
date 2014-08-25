@@ -57,5 +57,7 @@ x_sd<-sapply(X,sd,na.rm=TRUE)
 
 dt <- data.table(X)
 tidydata<- dt[,lapply(.SD,mean),by="activity,Subject"]
+filter <- grep("Subject|activity|*mean*|*Mean*",names(tidydata))
+tidydata<- tidydata[ ,filter , with = FALSE]
 write.table(tidydata,file="tidydata.txt",row.names = FALSE)
 
